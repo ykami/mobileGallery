@@ -155,7 +155,7 @@ define(["dojo/_base/lang","dojo/_base/html","dojo/_base/connect","dojo/_base/arr
 				headerLabel.innerHTML = args.title;
 				var srcBtn = registry.byId("sourceButton");
 				srcBtn.backTo = args.id;
-				srcBtn.select(true);
+				srcBtn.set("selected", false);
 				sourceButton.innerHTML = (srcBtn.selected ? "Demo" : "Source");
 				
 				// set the header's moveTo attribute to "navigation"
@@ -364,9 +364,9 @@ define(["dojo/_base/lang","dojo/_base/html","dojo/_base/connect","dojo/_base/arr
 		var navView = registry.byId("navigation");
 		array.forEach(demos, function(demo){
 			// first, set the category label
-			navView.addChild(new EdgeToEdgeCategory({
-				"label": demo.label
-			}));
+			var cat = new EdgeToEdgeCategory({"label": demo.label});
+			cat.placeAt(navView.containerNode);
+			cat.startup();
 			// then, add the list
 			var items = [];
 			array.forEach(demo.views, function(item){
@@ -395,7 +395,8 @@ define(["dojo/_base/lang","dojo/_base/html","dojo/_base/connect","dojo/_base/arr
 					}
 				})
 			});
-			navView.addChild(list);
+			list.placeAt(navView.containerNode);
+			list.startup();
 		});
 		// move navigation list view under correct parent (right or left pane)
 		var holder = dom.byId(structure.layout.leftPane.hidden ? "rightPane" : "leftPane");

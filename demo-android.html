@@ -6,7 +6,7 @@
 		<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Showcase</title>
-		<link rel="stylesheet" type="text/css" href="../../dojox/mobile/themes/android/android.css"></link>
+		<script type="text/javascript" src="../../dojox/mobile/deviceTheme.js" data-dojo-config="mblUserAgent:'Android'"></script>
 		<link rel="stylesheet" type="text/css" href="../../demos/mobileGallery/css/themes/android/gallery.css"></link>
 		<link rel="stylesheet" type="text/css" href="demo.css"/>
 		<link rel="apple-touch-icon" href="images/MobileShow_App_57.png"/>
@@ -35,7 +35,7 @@
 				<h1 id="header" dojoType="dojox.mobile.Heading" fixed="top">
 					<button id="navButton" dojoType="dojox.mobile.Button" class="baseBtn defaultBtn backBtn">Back</button>
 					<span id="headerLabel">Welcome</span>
-					<button id="sourceButton" dojoType="dojox.mobile.ToolBarButton" toggle="true" class="baseBtn defaultBtn">Source</button>
+					<button id="sourceButton" dojoType="dojox.mobile.ToolBarButton" toggle="true" class="baseBtn defaultBtn" style="float:right">Source</button>
 				</h1>
 				<div id="rightPane" dojoType="dojox.mobile.View" selected="true" style="overflow:hidden;">
 					<div id="welcome" dojoType="dojox.mobile.ScrollableView">
