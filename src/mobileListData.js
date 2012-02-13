@@ -3,9 +3,9 @@ define(["dojo/_base/lang",
 		"dojo/dom","dojo/dom-class",
 		"dijit/registry",
 		"dojo/data/ItemFileWriteStore",
-		"dojox/mobile/iconUtils", // dojox.mobile.iconUtils.createDomButton
-		"dojox/mobile/RoundRectDataList"
-],function(lang, connect, dom, domClass, registry, ItemFileWriteStore, iconUtils, RoundRectDataList) {
+		"dojox/mobile/iconUtils",
+		"dojox/mobile/RoundRectDataList"],
+function(lang, connect, dom, domClass, registry, ItemFileWriteStore, iconUtils, RoundRectDataList) {
 	lang.getObject("demos.mobile.src.mobileLists", true);
 	demos.mobile.src.mobileLists = function() {
 		var static_data = { 
